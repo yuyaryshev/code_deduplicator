@@ -43,10 +43,10 @@ export function fillOracleTableMeta(t: OracleTableMeta) {
 }
 
 export async function getTableMetas(db: OracleConnection0, opts: GetTableMetaOpts = {}): Promise<OracleTablesMeta> {
-    let schemas = opts.schemas || [];
-    let tablesWithSchema: { schema: string; table: string }[] = [];
-    let tablesWithoutSchema: string[] = [];
-    for (let t of opts.tables || []) {
+    const schemas = opts.schemas || [];
+    const tablesWithSchema: { schema: string; table: string }[] = [];
+    const tablesWithoutSchema: string[] = [];
+    for (const t of opts.tables || []) {
         if (t.includes(".")) {
             const [schema, table] = t.split(".");
             tablesWithSchema.push({ schema, table });
@@ -87,7 +87,7 @@ export async function getTableMetas(db: OracleConnection0, opts: GetTableMetaOpt
     const actualTables: OracleTableMeta[] = [];
     const actualTablesObj: { [key: string]: { [key: string]: OracleTableMeta } } = {};
 
-    for (let r of ((await db.execute(tablesSql))?.rows || []) as any) {
+    for (const r of ((await db.execute(tablesSql))?.rows || []) as any) {
         const t: OracleTableMeta = {
             schema: r.OWNER,
             name: r.TABLE_NAME,
@@ -136,7 +136,7 @@ export async function getTableMetas(db: OracleConnection0, opts: GetTableMetaOpt
   order by c.owner, c.table_name, c.column_id
 `;
 
-    for (let r of ((await db.execute(columnsSql))?.rows || []) as any) {
+    for (const r of ((await db.execute(columnsSql))?.rows || []) as any) {
         const {
             OWNER,
             TABLE_NAME,
@@ -169,7 +169,7 @@ export async function getTableMetas(db: OracleConnection0, opts: GetTableMetaOpt
         t.pkColumns[PK_POSITION - 1] = c;
     }
 
-    for (let t of actualTables) fillOracleTableMeta(t);
+    for (const t of actualTables) fillOracleTableMeta(t);
 
     return {
         tables: actualTables,
@@ -191,23 +191,23 @@ export type SerializedOracleTablesMeta = ReturnType<typeof serializeOracleTables
 
 export function deserializeOracleTablesMeta(s: SerializedOracleTablesMeta): OracleTablesMeta {
     const r: OracleTablesMeta = { tables: [], tablesObj: {} };
-    for (let t of s) {
+    for (const t of s) {
         const { pkColumns, ...other } = t;
         const tt: OracleTableMeta = {
             ...other,
             pkColumns: [],
             columnsByName: {},
         };
-        for (let c of t.columns) tt.columnsByName[c.name] = c;
+        for (const c of t.columns) tt.columnsByName[c.name] = c;
 
-        for (let name of pkColumns) tt.pkColumns.push(tt.columnsByName[name]);
+        for (const name of pkColumns) tt.pkColumns.push(tt.columnsByName[name]);
 
         if (!r.tablesObj[t.schema]) r.tablesObj[t.schema] = {};
 
         r.tablesObj[t.schema][t.name] = tt;
         r.tables.push(tt);
 
-        for (let t of r.tables) fillOracleTableMeta(t);
+        for (const t of r.tables) fillOracleTableMeta(t);
     }
     return r;
 }

@@ -79,7 +79,7 @@ export const decoderPartialSerializedPerson: Decoder<PartialSerializedPerson> = 
 });
 
 export function rowToSerializedPerson(r: any): SerializedPerson {
-    for (let k in r) deserializeField(personTable, r, k);
+    for (const k in r) deserializeField(personTable, r, k);
     r.stype = "person";
     return decoderSerializedPerson.runWithException(r);
 }

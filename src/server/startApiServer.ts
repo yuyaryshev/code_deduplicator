@@ -63,9 +63,9 @@ export const startEnv = async (args?: any): Promise<Env> => {
         terminating: false,
         timers: new Set(),
         terminate: () => {
-            for (let callback of pthis.onTerminateCallbacks) callback();
+            for (const callback of pthis.onTerminateCallbacks) callback();
             pthis.terminating = true;
-            for (let timer of pthis.timers) timer.cancel();
+            for (const timer of pthis.timers) timer.cancel();
         },
     } as any) as Env;
 
@@ -172,7 +172,7 @@ export const startEnv = async (args?: any): Promise<Env> => {
 
     publishApis(env, app);
 
-    let httpServer = http.createServer(app);
+    const httpServer = http.createServer(app);
 
     const httpServerInstance = httpServer.listen(env.settings.port, () => {
         console.log(

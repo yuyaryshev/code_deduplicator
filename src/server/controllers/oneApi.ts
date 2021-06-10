@@ -33,7 +33,7 @@ export function publishOneApis(env: Env, app: Express) {
     app.get("/api/one", async function personOneGetApi(req, res) {
         const ts = new Date().toISOString();
         let error: string | undefined = "CODE00000101 Unknown error";
-        let ok: boolean = false;
+        const ok: boolean = false;
 
         try {
             //const { q } = decoderOneGetApiRequest.runWithException(req.query);
@@ -80,7 +80,7 @@ export function publishOneApis(env: Env, app: Express) {
     app.post("/api/one", async function OneSaveApi(req, res) {
         const ts = new Date().toISOString();
         let error: string | undefined = "CODE00000104 Unknown error";
-        let ok: boolean = false;
+        const ok: boolean = false;
 
         try {
             let parsed;

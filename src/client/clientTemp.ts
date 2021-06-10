@@ -4,7 +4,7 @@ import { mainModel } from "./models";
 export function startClientTemp() {
     setTimeout(function doClientTemp() {
         for (let i = 1; i < 5; i++) {
-            let t = new TaskModel();
+            const t = new TaskModel();
             t.name = `Task${i}`;
             t.description = `Task${i}.description`;
             // (window as any).t = t;

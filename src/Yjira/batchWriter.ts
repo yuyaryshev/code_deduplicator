@@ -99,19 +99,19 @@ export function batchWriter<T extends unknown[]>(params: BatchWriterParams): Bat
             pthis.nonBatchRows += arrayBuffer.length;
         }
 
-        let batches: any[] = [];
-        let singles: any[] = [];
+        const batches: any[] = [];
+        const singles: any[] = [];
         if (pthis.batchSize > 1)
             while (arrayBuffer.length > pthis.batchSize) {
-                let batch = arrayBuffer.splice(0, pthis.batchSize);
-                let a: any[] = [];
+                const batch = arrayBuffer.splice(0, pthis.batchSize);
+                const a: any[] = [];
                 for (let i = 0; i < pthis.batchSize; i++)
                     a.push(...(typeof batch[i] === "function" ? (batch as any)[i]() : batch[i]));
                 batches.push(a);
             }
 
         const sz = arrayBuffer.length;
-        let a: any[] = [];
+        const a: any[] = [];
         for (let i = 0; i < sz; i++)
             singles.push(typeof arrayBuffer[i] === "function" ? (arrayBuffer as any)[i]() : arrayBuffer[i]);
 

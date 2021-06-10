@@ -1,5 +1,5 @@
-export let CHANGES_AGGREGATION_INTERVAL = 2000;
-export let MAX_CHANGES_AGGREGATION_INTERVAL = 20000;
+export const CHANGES_AGGREGATION_INTERVAL = 2000;
+export const MAX_CHANGES_AGGREGATION_INTERVAL = 20000;
 
 export type EditedObjects = Map<any, any>;
 let editedObjects: EditedObjects = new Map();

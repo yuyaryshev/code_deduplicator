@@ -392,7 +392,7 @@ export function jiraCleanInner(a: any, p: string) {
         }
 
         if (Array.isArray(a[p]) || typeof a[p] === "object") {
-            for (let k in a[p]) jiraCleanInner(a[p], k);
+            for (const k in a[p]) jiraCleanInner(a[p], k);
         }
     }
 }
@@ -425,7 +425,7 @@ export class JiraWrapper {
         const firstMs = this.responseLogs[0]?.ms || 0;
         const r = { total: { c: 0, ms: firstMs, minMs: firstMs, maxMs: firstMs, errorsCount: 0 } } as any;
 
-        for (let item of this.responseLogs) {
+        for (const item of this.responseLogs) {
             if (!r[item.type])
                 r[item.type] = {
                     c: 0,
@@ -445,7 +445,7 @@ export class JiraWrapper {
             if (r[item.type].maxMs < item.ms) r[item.type].maxMs = item.ms;
         }
 
-        for (let k in r) {
+        for (const k in r) {
             r[k].avgMs = Math.round(r[k].ms / r[k].c / this.maxResponseLogsMs);
             delete r[k].ms;
         }
@@ -504,7 +504,7 @@ export class JiraWrapper {
                 if (!response) throw new Error(`CODE00000030 Got empty response from Jira!`);
 
                 if (expectedFields) {
-                    for (let field of expectedFields)
+                    for (const field of expectedFields)
                         if (!response[field])
                             throw new Error(`CODE00000031 Expected field ${field} not found in jira response!`);
                 }
@@ -607,13 +607,13 @@ export class JiraWrapper {
         });
         if (query.fullLoad) delete query.fullLoad;
 
-        let issuesList = await this.jiraRequest<JiraIssue[]>(`search.search`, "issues", query, undefined, undefined);
-        if (issuesList) for (let issue of issuesList) return Number(issue.key.split("-")[1]);
+        const issuesList = await this.jiraRequest<JiraIssue[]>(`search.search`, "issues", query, undefined, undefined);
+        if (issuesList) for (const issue of issuesList) return Number(issue.key.split("-")[1]);
         return undefined;
     }
 
     issuesToContextInputs(r: IssueContextInput[], issues: JiraIssue[]) {
-        for (let issue of issues)
+        for (const issue of issues)
             r.push({
                 project: issue.key.split("-")[0],
                 issueKey: issue.key,
@@ -622,7 +622,7 @@ export class JiraWrapper {
     }
 
     async jqlGetIssueKeys(jql: string): Promise<IssueContextInput[]> {
-        let issues = await this.jiraRequest<JiraIssue[]>(
+        const issues = await this.jiraRequest<JiraIssue[]>(
             `search.search`,
             "issues",
             {

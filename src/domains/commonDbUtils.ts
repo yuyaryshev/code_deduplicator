@@ -37,7 +37,7 @@ export function createTable(db: Database, table: Table) {
 
 export function prepareTableFuncs(db: Database, table: Table) {
     function makeSql(insert: boolean) {
-        const sql = `${insert ? "insert" : "replace"} into ${table.name}(${table.columns
+        return `${insert ? "insert" : "replace"} into ${table.name}(${table.columns
             .filter((c) => (insert ? c.name !== "id" : true))
             .map((c) => specialCols[c.name]?.replaceField || `${c.name}`)
             .filter((s) => s && s.length)
@@ -47,12 +47,11 @@ export function prepareTableFuncs(db: Database, table: Table) {
             .map((c) => specialCols[c.name]?.replaceValue || `:${c.name}`)
             .filter((s) => s && s.length)
             .join(",")})`;
-        return sql;
     }
 
     const pthis = {
         emptyFieldsToNulls: function emptyFieldsToNullsFunction(v: any) {
-            for (let c of table.columns) {
+            for (const c of table.columns) {
                 if (v[c.name] === undefined) v[c.name] = null;
                 else if (v[c.name] === false) v[c.name] = 0;
                 else if (v[c.name] === true) v[c.name] = 1;
@@ -80,7 +79,7 @@ export function prepareTableFuncs(db: Database, table: Table) {
 export type TableFuncs = ReturnType<typeof prepareTableFuncs>;
 
 export function serializeField(table: Table, o: any, f: string) {
-    for (let c of table.columns)
+    for (const c of table.columns)
         if (c.name === f) {
             switch (c.type) {
                 case "boolean":
@@ -93,7 +92,7 @@ export function serializeField(table: Table, o: any, f: string) {
 
 export function deserializeField(table: Table, o: any, f: string) {
     if (o[f] === null) o[f] = undefined;
-    for (let c of table.columns)
+    for (const c of table.columns)
         if (c.name === f) {
             switch (c.type) {
                 case "boolean":

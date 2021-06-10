@@ -1,10 +1,9 @@
 import { parse } from "query-string";
 
 export function apiUrl(): string {
-    let t1 = window.location.origin.split("://");
-    let t2 = t1[1].split(":");
-    const r = t1[0] + "://" + t2[0] + ":4300";
-    return r;
+    const t1 = window.location.origin.split("://");
+    const t2 = t1[1].split(":");
+    return t1[0] + "://" + t2[0] + ":4300";
 }
 
 export function surveyIdFromUrl(): string {

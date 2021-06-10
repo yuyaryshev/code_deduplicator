@@ -71,7 +71,7 @@ export function makeOracleStub(opts: OracleStubOpts): OracleConnection0 {
             return;
         }
 
-        for (let column of newMeta.columns) {
+        for (const column of newMeta.columns) {
             if (!meta.columns.includes(column)) db.exec(`alter table ${newMeta.table} add column ${column}`);
         }
     }
@@ -99,7 +99,7 @@ export function makeOracleStub(opts: OracleStubOpts): OracleConnection0 {
             if (sql.toUpperCase().startsWith("MERGE")) return undefined as any;
 
             adjustTableForSql(sql);
-            for (let bindParams of binds) sqliteExec(sql, bindParams);
+            for (const bindParams of binds) sqliteExec(sql, bindParams);
             return undefined as any;
         } as any,
 

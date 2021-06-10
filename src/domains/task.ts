@@ -204,7 +204,7 @@ export const decoderPartialSerializedTask: Decoder<PartialSerializedTask> = obje
 });
 
 export function rowToSerializedTask(r: any): SerializedTask {
-    for (let k in r) deserializeField(taskTable, r, k);
+    for (const k in r) deserializeField(taskTable, r, k);
     r.stype = "task";
     return decoderSerializedTask.runWithException(r);
 }

@@ -9,7 +9,7 @@ export function reformatDate(t: any, prop: string) {
 }
 
 export function copyPrimitiveFields(target: any, source: any) {
-    for (let k in source)
+    for (const k in source)
         if (target[k]?.et) {
             if (typeof source[k] !== "object" && target[k] !== source[k]) target[k].set(source[k]);
         } else {
@@ -20,7 +20,7 @@ export function copyPrimitiveFields(target: any, source: any) {
 export function syncArray(modelProp: any, dataProp: any, onNewModelItemFunc: (dataItem: any) => any) {
     withDisabledAddEdited(function () {
         L_outter: for (let i = modelProp.length - 1; i >= 0; i--) {
-            for (let dataItem of dataProp) {
+            for (const dataItem of dataProp) {
                 if (typeof dataItem === "object") {
                     if (dataItem.id === modelProp[i].id) continue L_outter; // Item found - skip it
                 } else {
@@ -30,9 +30,9 @@ export function syncArray(modelProp: any, dataProp: any, onNewModelItemFunc: (da
             modelProp.splice(i, 1); // Item not found, - delete it
         }
 
-        for (let dataItem of dataProp) {
+        for (const dataItem of dataProp) {
             let modelItem;
-            for (let modelItemCandidate of modelProp) {
+            for (const modelItemCandidate of modelProp) {
                 if (modelItemCandidate.id === dataItem.id) {
                     modelItem = modelItemCandidate;
                     break;

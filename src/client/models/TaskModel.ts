@@ -70,7 +70,7 @@ export async function saveTasks(tasks: TaskModel[] | undefined) {
     if (!tasks?.length) return;
 
     const serializedTasks: any[] = [];
-    for (let t of tasks) {
+    for (const t of tasks) {
         const serializedTask: SerializedTask = {
             // GRP_task_fields
             stype: "task",

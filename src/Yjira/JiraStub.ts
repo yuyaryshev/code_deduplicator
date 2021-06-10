@@ -54,7 +54,7 @@ export const makeJiraStub = (opts0: JiraStubOptions): JiraStubInterface => {
         }
     );
 
-    let my_ymutex = limit ? ymutex(limit, limitReleaseDelay || 0) : undefined;
+    const my_ymutex = limit ? ymutex(limit, limitReleaseDelay || 0) : undefined;
     let requests: any = {};
     let db: better_sqlite3.Database | undefined;
     let selectStatement: better_sqlite3.Statement<[string]>;
@@ -78,7 +78,7 @@ export const makeJiraStub = (opts0: JiraStubOptions): JiraStubInterface => {
             db.exec(`create unique index if not exists ix_requests_cache on requests_cache(key)`);
             selectStatement = db.prepare(`select * from requests_cache where key = ?`);
             if (opts.prefetch) {
-                for (let row of db.prepare(`select * from requests_cache`).iterate())
+                for (const row of db.prepare(`select * from requests_cache`).iterate())
                     m.set(row.key, jiraClean(JSON.parse(row.response)));
             }
         } catch (e) {

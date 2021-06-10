@@ -17,7 +17,7 @@ import { startClientTemp } from "./clientTemp";
 
 const useHotReloading = process.env.hot;
 
-let Main = useHotReloading ? Main0 : Main0;
+const Main = useHotReloading ? Main0 : Main0;
 
 const UIMain: React.FC<{ mainModel: MainModel }> = ({ mainModel }) => {
     const { enqueueSnackbar } = useSnackbar();
