@@ -2,12 +2,12 @@
  {
   "cpl": 288,
   "filePath": "src\\client\\clientTemp.ts",
-  "pos": 485
+  "pos": 487
  },
  {
   "cpl": 280,
   "filePath": "src\\client\\clientTemp.ts",
-  "pos": 538
+  "pos": 540
  },
  {
   "cpl": 208,
@@ -52,7 +52,7 @@
  {
   "cpl": 303,
   "filePath": "src\\client\\models\\TaskModel.ts",
-  "pos": 5335
+  "pos": 5337
  },
  {
   "cpl": 309,
@@ -72,197 +72,197 @@
  {
   "cpl": 297,
   "filePath": "src\\domains\\commonDbUtils.ts",
-  "pos": 2948
+  "pos": 2927
  },
  {
   "cpl": 209,
   "filePath": "src\\domains\\commonDbUtils.ts",
-  "pos": 3563
+  "pos": 3544
  },
  {
   "cpl": 292,
   "filePath": "src\\domains\\commonDbUtils.ts",
-  "pos": 4182
+  "pos": 4163
  },
  {
   "cpl": 101,
   "filePath": "src\\server\\controllers\\oneApi.ts",
-  "pos": 2396
+  "pos": 2398
  },
  {
   "cpl": 202,
   "filePath": "src\\server\\controllers\\oneApi.ts",
-  "pos": 2753
+  "pos": 2755
  },
  {
   "cpl": 104,
   "filePath": "src\\server\\controllers\\oneApi.ts",
-  "pos": 4782
+  "pos": 4786
  },
  {
   "cpl": 310,
   "filePath": "src\\server\\controllers\\oneApi.ts",
-  "pos": 4991
+  "pos": 4995
  },
  {
   "cpl": 94,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 2047
+  "pos": 2051
  },
  {
   "cpl": 197,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 2231
+  "pos": 2235
  },
  {
   "cpl": 198,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 2550
+  "pos": 2554
  },
  {
   "cpl": 199,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 2608
+  "pos": 2612
  },
  {
   "cpl": 307,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 3836
+  "pos": 3840
  },
  {
   "cpl": 110,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 4352
+  "pos": 4356
  },
  {
   "cpl": 111,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 4445
+  "pos": 4449
  },
  {
   "cpl": 112,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 4575
+  "pos": 4579
  },
  {
   "cpl": 308,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 4827
+  "pos": 4831
  },
  {
   "cpl": 284,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 4902
+  "pos": 4906
  },
  {
   "cpl": 183,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 5507
+  "pos": 5511
  },
  {
   "cpl": 291,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 5766
+  "pos": 5770
  },
  {
   "cpl": 281,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 6415
+  "pos": 6421
  },
  {
   "cpl": 282,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 6573
+  "pos": 6579
  },
  {
   "cpl": 283,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 6809
+  "pos": 6815
  },
  {
   "cpl": 279,
   "filePath": "src\\server\\startApiServer.ts",
-  "pos": 6863
+  "pos": 6869
  },
  {
   "cpl": 210,
   "filePath": "src\\Yjira\\batchWriter.ts",
-  "pos": 6094
+  "pos": 6104
  },
  {
   "cpl": 296,
   "filePath": "src\\Yjira\\JiraStub.ts",
-  "pos": 2963
+  "pos": 2967
  },
  {
   "cpl": 108,
   "filePath": "src\\Yjira\\JiraStub.ts",
-  "pos": 3205
+  "pos": 3209
  },
  {
   "cpl": 185,
   "filePath": "src\\Yjira\\JiraStub.ts",
-  "pos": 5173
+  "pos": 5177
  },
  {
   "cpl": 109,
   "filePath": "src\\Yjira\\JiraStub.ts",
-  "pos": 5428
+  "pos": 5432
  },
  {
   "cpl": 27,
   "filePath": "src\\Yjira\\JiraStub.ts",
-  "pos": 5619
+  "pos": 5623
  },
  {
   "cpl": 28,
   "filePath": "src\\Yjira\\JiraStub.ts",
-  "pos": 6120
+  "pos": 6124
  },
  {
   "cpl": 313,
   "filePath": "src\\Yjira\\JiraStub.ts",
-  "pos": 6383
+  "pos": 6387
  },
  {
   "cpl": 29,
   "filePath": "src\\Yjira\\JiraWrapper.ts",
-  "pos": 13981
+  "pos": 13987
  },
  {
   "cpl": 30,
   "filePath": "src\\Yjira\\JiraWrapper.ts",
-  "pos": 14207
+  "pos": 14215
  },
  {
   "cpl": 31,
   "filePath": "src\\Yjira\\JiraWrapper.ts",
-  "pos": 14708
+  "pos": 14716
  },
  {
   "cpl": 32,
   "filePath": "src\\Yjira\\JiraWrapper.ts",
-  "pos": 15537
+  "pos": 15545
  },
  {
   "cpl": 99,
   "filePath": "src\\Yjira\\JiraWrapper.ts",
-  "pos": 15852
+  "pos": 15860
  },
  {
   "cpl": 366,
   "filePath": "src\\Yjira\\JiraWrapper.ts",
-  "pos": 16098
+  "pos": 16106
  },
  {
   "cpl": 367,
   "filePath": "src\\Yjira\\JiraWrapper.ts",
-  "pos": 16980
+  "pos": 16988
  },
  {
   "cpl": 207,
   "filePath": "src\\Yjira\\JiraWrapper.ts",
-  "pos": 19326
+  "pos": 19342
  },
  {
   "cpl": 131,
@@ -332,11 +332,11 @@
  {
   "cpl": 196,
   "filePath": "src\\Yoracle\\OracleStub.ts",
-  "pos": 3113
+  "pos": 3115
  },
  {
   "cpl": 95,
   "filePath": "src\\Yoracle\\OracleStub.ts",
-  "pos": 4088
+  "pos": 4092
  }
 ]

@@ -98,6 +98,7 @@ specifiers:
   mobx: 6.1.8
   mobx-react-lite: 3.2.0
   mocha: ^8.3.0
+  modify-filepath: D:\b\Mine\GIT_Work\modify-filepath
   moment: 2.29.1
   moment-countdown: ^0.0.3
   moment-timezone: 0.5.33
@@ -234,6 +235,7 @@ devDependencies:
   jest: 27.0.4
   jest-ts-webcompat-resolver: 1.0.0
   json5: 2.2.0
+  modify-filepath: link:../modify-filepath
   prettier: 2.3.1
   sinon: 11.1.1
   ts-jest: 27.0.3_jest@27.0.4+typescript@4.2.2
