@@ -1,10 +1,10 @@
 import axios from "axios";
-import { decoderOneGetApiResponse, decoderOneSaveApiResponse, OneGetApiRequest, OneSaveApiRequest } from "../api";
-import { notificationError } from "./notifications";
-import { addEdited, EditedObjects } from "./models/edited";
-import { PersonModel } from "./models/PersonModel";
-import { apiUrl } from "./models/myUrl";
-import { saveTasks, TaskModel } from "./models/TaskModel";
+import { decoderOneGetApiResponse, decoderOneSaveApiResponse, OneGetApiRequest, OneSaveApiRequest } from "../api/index.js";
+import { notificationError } from "./notifications.js";
+import { addEdited, EditedObjects } from "./models/edited.js";
+import { PersonModel } from "./models/PersonModel.js";
+import { apiUrl } from "./models/myUrl.js";
+import { saveTasks, TaskModel } from "./models/TaskModel.js";
 
 export async function oneGetApi() {
     try {

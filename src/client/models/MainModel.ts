@@ -1,14 +1,14 @@
 import { observable } from "mobx";
-import { TaskListModel } from "./TaskListModel";
-import { TaskModel } from "./TaskModel";
-import { ActionAreaModel } from "./ActionAreaModel";
-import { PersonListModel } from "./PersonListModel";
-import { MessageBoxFunc, MessageBoxModel, registerMessageBox } from "../components/MessageBox";
-import { getEditableMeta, ymeta } from "./ymeta";
-import { PersonModel } from "./PersonModel";
-import { apiUrl } from "./myUrl";
-import { hasEdited, withDisabledAddEdited } from "./edited";
-import { syncArray } from "./common";
+import { TaskListModel } from "./TaskListModel.js";
+import { TaskModel } from "./TaskModel.js";
+import { ActionAreaModel } from "./ActionAreaModel.js";
+import { PersonListModel } from "./PersonListModel.js";
+import { MessageBoxFunc, MessageBoxModel, registerMessageBox } from "../components/MessageBox.js";
+import { getEditableMeta, ymeta } from "./ymeta.js";
+import { PersonModel } from "./PersonModel.js";
+import { apiUrl } from "./myUrl.js";
+import { hasEdited, withDisabledAddEdited } from "./edited.js";
+import { syncArray } from "./common.js";
 
 export const TaskModelLinkOpts = {
     getAutocompleteItemsSync: () => mainModel.tasks.items,

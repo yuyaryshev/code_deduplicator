@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "react-dom";
 
-import { apiUrl } from "./models/myUrl";
-import { ytheme } from "./components/ytheme";
+import { apiUrl } from "./models/myUrl.js";
+import { ytheme } from "./components/ytheme.js";
 import { fjmap } from "ystd";
 
 const useHotReloading = true;

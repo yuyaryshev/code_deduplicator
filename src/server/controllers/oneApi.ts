@@ -1,5 +1,5 @@
 import * as path from "path";
-import { Env } from "../startApiServer";
+import { Env } from "../startApiServer.js";
 import { dateDiff, debugMsgFactory as debugjs, newGuid, writeFileSerieSync, writeFileSyncIfChanged } from "Ystd";
 import { Express } from "express";
 import {
@@ -8,7 +8,7 @@ import {
     decoderOneSaveApiResponse,
     OneGetApiResponse,
     OneSaveApiResponse,
-} from "../../api/oneApi";
+} from "../../api/oneApi.js";
 import { readFileSync, writeFileSync } from "fs";
 
 const debug = debugjs("oneApi");

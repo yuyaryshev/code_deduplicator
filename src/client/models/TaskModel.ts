@@ -1,14 +1,14 @@
-import { SerializedTask, TaskType, TaskTypeValues, WaitType, WaitTypeValues } from "../../domains";
-import { copyPrimitiveFields, syncArray } from "./common";
+import { SerializedTask, TaskType, TaskTypeValues, WaitType, WaitTypeValues } from "../../domains/index.js";
+import { copyPrimitiveFields, syncArray } from "./common.js";
 import { v4 as newId } from "uuid";
-import { addEdited, hasEdited, withDisabledAddEdited } from "./edited";
-import { apiUrl } from "./myUrl";
-import { notificationError } from "../notifications";
-import { PersonModel } from "./PersonModel";
+import { addEdited, hasEdited, withDisabledAddEdited } from "./edited.js";
+import { apiUrl } from "./myUrl.js";
+import { notificationError } from "../notifications.js";
+import { PersonModel } from "./PersonModel.js";
 import { DateTime } from "luxon";
-import { optionalDateToString } from "../../domains/commonDbUtils";
-import { Editable, ymeta } from "./ymeta";
-import { mainModel, PersonModelLinkOpts, TaskModelLinkOpts } from "./MainModel";
+import { optionalDateToString } from "../../domains/commonDbUtils.js";
+import { Editable, ymeta } from "./ymeta.js";
+import { mainModel, PersonModelLinkOpts, TaskModelLinkOpts } from "./MainModel.js";
 import { observable } from "mobx";
 //import { notifyChanges } from "./MainModel";
 
