@@ -57,7 +57,7 @@ export interface IssueLoaderVersion {
 }
 
 export const startEnv = async (args?: any): Promise<Env> => {
-    const pthis = ({
+    const pthis = {
         args,
         onTerminateCallbacks: [],
         terminating: false,
@@ -67,7 +67,7 @@ export const startEnv = async (args?: any): Promise<Env> => {
             pthis.terminating = true;
             for (const timer of pthis.timers) timer.cancel();
         },
-    } as any) as Env;
+    } as any as Env;
 
     yconsole.log(`CODE00000094`, `Starting ysurvey...`);
     const settingsPath = resolve("./settings.json");

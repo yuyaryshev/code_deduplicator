@@ -1,5 +1,10 @@
 import axios from "axios";
-import { decoderOneGetApiResponse, decoderOneSaveApiResponse, OneGetApiRequest, OneSaveApiRequest } from "../api/index.js";
+import {
+    decoderOneGetApiResponse,
+    decoderOneSaveApiResponse,
+    OneGetApiRequest,
+    OneSaveApiRequest,
+} from "../api/index.js";
 import { notificationError } from "./notifications.js";
 import { addEdited, EditedObjects } from "./models/edited.js";
 import { PersonModel } from "./models/PersonModel.js";

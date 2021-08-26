@@ -115,6 +115,7 @@ specifiers:
   reflect-metadata: ^0.1.13
   sinon: ^11.1.1
   sort-keys: ^4.2.0
+  source-map-support: ^0.5.19
   sql-prettier: ^0.1.10
   ts-jest: ^27.0.3
   ts-loader: ^9.2.3
@@ -246,6 +247,7 @@ devDependencies:
   react-refresh: 0.10.0
   react-refresh-typescript: 2.0.1_293ce922c81c374c6a085f8a851e4a7a
   sinon: 11.1.1
+  source-map-support: 0.5.19
   ts-jest: 27.0.3_jest@27.0.6+typescript@4.2.2
   ts-loader: 9.2.3_typescript@4.2.2+webpack@5.42.1
   tslib: 2.3.0
@@ -5790,7 +5792,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.5.0
     optionalDependencies:
-      fsevents: 2.3.1
+      fsevents: 2.3.2
 
   /chownr/1.1.4:
     resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
@@ -7849,17 +7851,10 @@ packages:
     dev: true
     optional: true
 
-  /fsevents/2.3.1:
-    resolution: {integrity: sha512-YR47Eg4hChJGAB1O3yEAOkGO+rlzutoICGqGo9EZ4lKWokzZRSyIW1QmTzqjtw8MJdj9srP869CuWw/hyzSiBw==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    optional: true
-
   /fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
-    dev: true
     optional: true
 
   /function-bind/1.1.1:
@@ -8129,7 +8124,6 @@ packages:
 
   /graceful-fs/4.2.6:
     resolution: {integrity: sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==}
-    dev: true
 
   /growl/1.10.5:
     resolution: {integrity: sha512-qBr4OuELkhPenW6goKVXiv47US3clb3/IbuWF9KNKEijAy9oeHxU9IgzjvJhHkUzhaj7rOUD7+YGWqUjLp5oSA==}
@@ -9899,7 +9893,7 @@ packages:
     dependencies:
       universalify: 1.0.0
     optionalDependencies:
-      graceful-fs: 4.2.4
+      graceful-fs: 4.2.6
 
   /jsprim/1.4.1:
     resolution: {integrity: sha1-MT5mvB5cwG5Di8G3SZwuXFastqI=}
