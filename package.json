@@ -127,7 +127,8 @@
         "webpack": "^5.42.1",
         "webpack-cli": "^4.7.2",
         "webpack-node-externals": "3.0.0",
-        "source-map-support": "^0.5.19"
+        "source-map-support": "^0.5.19",
+        "@babel/preset-typescript": "^7.15.0"
     },
     "dependencies": {
         "@date-io/luxon": "2.10.8",
